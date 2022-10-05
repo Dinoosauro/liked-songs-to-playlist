@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Saved tracks to Playlist</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Work+Sans">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <link rel="stylesheet" href="style.css">
+    <style>
+
+    </style>
+</head>
+
+<body style="background-color: rgb(22,22,22);">
+    <div style="margin: 10px;">
+        <h1>Spotify Favourites to Playlist</h1>
+        <i>Convert instantly your saved tracks into a Spotify playlist. Works entirely in your browser.</i> <br> <br>
+        <button onclick="askAuth()">Connect to Spotify</button> <br>
+        <div style="position: absolute; bottom: 0;">
+            <i style="font-size: 12px;">Spotify is trademark of Spotify AB, which is not affiliated to this website.
+            </i> <br> <i style="font-size: 8px;">I know, graphically this website isn't impressive. But the important
+                thing is that it should work.</i>
+        </div>
+    </div>
+    <script>
+        function askAuth() {
+            var client = "3d988fa203cb49dd9f89b1a43864246c";
+            var redirect_uri = 'https://dinoosauro.github.io/liked-songs-to-playlist/continue.html';
+            var scope = "playlist-modify-public%20user-library-read";
+            var link = "https://accounts.spotify.com/authorize?client_id=" + client + "&redirect_uri=" + encodeURIComponent(redirect_uri) + "&scope=" + scope + "&response_type=token";
+            window.location = link;
+        }
+    </script>
+</body>
