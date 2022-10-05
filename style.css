@@ -1,0 +1,26 @@
+button {
+    font-family: "Work Sans";
+    border-radius: 10px;
+    height: 48px;
+    width: 100%;
+    max-width: 500px;
+    background-color: green;
+    color: white;
+}
+button:hover {
+    background-color: darkgreen;
+    cursor: pointer;
+}
+h1,i,h2,label,input {
+    font-family: "Work Sans";
+    color: white;
+}
+textarea {
+    background-color: dimgray;
+    color: white;
+    width: 100%;
+    max-width: 300px;
+    height: 24px;
+    font-family: "Work Sans";
+    border-radius: 10px;
+}
